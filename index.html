@@ -1,7 +1,67 @@
-<html> 
- <head> 
- </head> 
- <body>   
-   <h1>Hello World!<h1> 
- </body> 
-</html    
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Labyrinth Landing Page</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: black;
+        color: white;
+        font-family: Arial, sans-serif;
+      }
+      #container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 500px;
+        height: 500px;
+        margin: 50px auto;
+        position: relative;
+      }
+      .box {
+        width: 50px;
+        height: 50px;
+        border: 2px solid orange;
+        box-sizing: border-box;
+        position: absolute;
+      }
+      .box:nth-child(odd) {
+        background-color: #ff6600;
+      }
+      .box:nth-child(even) {
+        background-color: #660000;
+      }
+      .box.top {
+        top: 0;
+      }
+      .box.right {
+        right: 0;
+      }
+      .box.bottom {
+        bottom: 0;
+      }
+      .box.left {
+        left: 0;
+      }
+      .box.move {
+        animation: moveBox 2s linear infinite;
+      }
+      @keyframes moveBox {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div class="box top"></div>
+      <div class="box right"></div>
+      <div class="box bottom"></div>
+      <div class="box left"></div>
+      <div class="box move" style="top: 100px; left: 100px;"></div>
+      <div class="box move" style="top: 200px; left: 300px;"></div>
+      <div class="box move" style="top: 400px; left: 200px;"></div>
+    </div>
+  </body>
+</html>
