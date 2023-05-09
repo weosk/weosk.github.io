@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Labyrinth Landing Page</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: black;
+        color: white;
+        font-family: Arial, sans-serif;
+      }
+      #container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 500px;
+        height: 500px;
+        margin: 50px auto;
+        position: relative;
+      }
+      .box {
+        width: 50px;
+        height: 50px;
+        border: 2px solid orange;
+        box-sizing: border-box;
+        position: absolute;
+        background-color: #660000;
+      }
+      .box:nth-child(odd) {
+        background-color: #ff6600;
+      }
+      .path {
+        background-color: #ff6600;
+      }
+      .path.top {
+        top: 0;
+        height: 100px;
+        clip-path: polygon(0% 100%, 50% 50%, 100% 100%);
+      }
+      .path.right {
+        right: 0;
+        width: 100px;
+        clip-path: polygon(100% 0%, 50% 50%, 100% 100%);
+      }
+      .path.bottom {
+        bottom: 0;
+        height: 100px;
+        clip-path: polygon(0% 0%, 50% 50%, 100% 0%);
+      }
+      .path.left {
+        left: 0;
+        width: 100px;
+        clip-path: polygon(0% 0%, 50% 50%, 0% 100%);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div class="box top"></div>
+      <div class="path top"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box right"></div>
+      <div class="path right"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box bottom"></div>
+      <div class="path bottom"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box left"></div>
+      <div class="path left"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+  </body>
+</html>
